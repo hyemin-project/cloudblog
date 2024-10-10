@@ -1,0 +1,107 @@
+/* Post Form Styles */
+.post-form-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .post-form-page h1 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .post-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+  }
+  
+  .form-group input[type="text"],
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .form-group textarea {
+    height: 200px;
+    resize: vertical;
+  }
+  
+  .form-group select {
+    background-color: white;
+  }
+  
+  .submit-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .success-message {
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    color: #3c763d;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 600px) {
+    .post-form-page {
+      padding: 15px;
+    }
+  
+    .form-group input[type="text"],
+    .form-group textarea,
+    .form-group select {
+      font-size: 14px;
+    }
+  
+    .submit-button {
+      padding: 10px 15px;
+      font-size: 14px;
+    }
+  }
+
+  .quill {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  
+  .ql-editor {
+    min-height: 200px;
+  }

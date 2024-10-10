@@ -1,0 +1,329 @@
+/* Main Comment Section Styling */
+.comment-section {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.comment-section h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.comment-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-section form {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f2f0f5; /* Light background for the comment input */
+  border-radius: 25px; /* Rounded corners for the input area */
+}
+
+.comment-section form input[type="text"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+.comment-section form button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+}
+
+.comment-section form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Main comment container */
+.comment-container {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Comment box styling */
+.comment {
+  display: flex;
+  padding: 15px;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+/* Avatar styling */
+.comment-avatar {
+  width: 50px;      
+  height: 50px;    
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px; 
+  color: white;
+  font-weight: bold;
+  margin-right: 15px;
+  position: relative;
+  box-sizing: border-box; 
+}
+
+.comment-avatar span {
+  font-size: 24px; /* Ensure the font size is appropriate */
+  font-weight: bold;
+}
+
+/* Comment content */
+.comment-content {
+  flex-grow: 1;
+}
+
+.comment-content p {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.comment-content strong {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Actions (like, reply) */
+.comment-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.comment-actions .like-button {
+  cursor: pointer;
+  color: grey;
+  font-size: 14px;
+  margin-right: 20px;
+}
+
+.comment-actions .like-button.liked {
+  color: blue;
+}
+
+.comment-actions .reply-text {
+  cursor: pointer;
+  color: #007bff;
+  margin-right: 15px;
+}
+
+.comment-actions .comment-time {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Replies styling */
+.replies {
+  margin-left: 50px;
+  margin-top: 10px;
+  position: relative;
+  background-color: #eef1f6; /* Light purple/grey background for replies */
+  border-radius: 12px; /* Rounded corners for reply section */
+  padding: 15px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Line connecting replies */
+.reply-line {
+  position: absolute;
+  left: -30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #b3b3b3;
+}
+
+/* Arrow pointing to parent comment */
+.reply-arrow {
+  position: absolute;
+  left: -10px;
+  top: 10px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid #eef1f6; /* Same color as reply background */
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+}
+
+/* Reply form styling */
+.reply-form {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.reply-form input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded input for reply */
+  font-size: 14px;
+}
+
+.reply-form button {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 25px; /* Rounded button */
+  cursor: pointer;
+}
+
+.reply-form button:hover {
+  background-color: #0056b3;
+}
+
+.comment-time {
+  margin-left: 10px;
+  font-size: 12px;
+  color: #7f7d7d;
+}
+
+/* Delete button */
+.delete-button {
+  color: red;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-icon {
+  cursor: pointer;
+  color: #333;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.menu-icon:hover {
+  color: #007bff;
+}
+/* Existing styles... */
+
+/* Edit form styling */
+.edit-form {
+  margin-top: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.edit-textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  resize: vertical;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.edit-actions button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.save-button {
+  background-color: #007bff;
+  color: white;
+  margin-right: 10px;
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+.cancel-button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: #545b62;
+}
+
+/* Adjust existing styles for better compatibility */
+.comment-content {
+  flex-grow: 1;
+  padding-right: 30px; /* Make room for the menu icon */
+}
+
+.menu-container {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.menu-item {
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+.menu-item.delete:hover {
+  background-color: #ffebee;
+  color: #d32f2f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .edit-actions {
+    flex-direction: column;
+  }
+  
+  .edit-actions button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

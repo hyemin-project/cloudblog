@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.header-left, .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: "Lobster", sans-serif;
+  color: #0d0c22;
+  text-decoration: none;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #6e6d7a;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.header-nav a:hover {
+  color: #0d0c22;
+}
+
+.button {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.button-primary {
+  background-color: #0d0c22;
+  color: #ffffff;
+  border: none;
+}
+
+.button-primary:hover {
+  background-color: #2b2a33;
+}
+
+.button-secondary {
+  background-color: #f3f3f4;
+  color: #0d0c22;
+  border: none;
+  margin-right: 0.5rem;
+}
+
+.button-secondary:hover {
+  background-color: #e7e7e9;
+}
+
+.username {
+  margin-right: 1rem;
+  color: #0d0c22;
+  font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .header-left, .header-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .header-nav {
+    order: -1;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+}

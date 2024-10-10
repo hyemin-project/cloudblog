@@ -1,0 +1,212 @@
+/* Main container styles */
+.post-page-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Back arrow styles */
+.back-arrow {
+  cursor: pointer;
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+/* Layout for post page */
+.post-page {
+  display: flex;
+  background-color: #ffffff;
+}
+
+/* Sidebar styles */
+.sidebar {
+  flex: 1;
+  padding-right: 2rem;
+  border-right: 1px solid #e2e8f0;
+  margin: 1rem;
+}
+
+.sidebar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+/* Recent posts list styles */
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.recent-posts-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 10px;
+  position: relative;
+}
+
+.recent-posts-list li a {
+  display: block;
+  color: #4a5568;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.3s ease;
+}
+.recent-post-item {
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.recent-post-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  text-decoration: none;
+}
+
+.recent-post-item.active .recent-post-link {
+  font-weight: bold;
+  color: #3182ce; /* 활성 항목의 색상, 필요에 따라 조정하세요 */
+}
+
+.recent-post-item:hover .recent-post-link {
+  text-decoration: underline;
+}
+
+/* Styles for active (current) post in the list */
+.recent-posts-list li.active {
+  font-weight: bold;
+}
+
+.recent-posts-list li.active a {
+  color: #3182ce;
+}
+
+.recent-posts-list li.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color: #3182ce;
+}
+
+.recent-posts-list li a:hover {
+  color: #3182ce;
+}
+
+/* Main post content styles */
+.post-content {
+  flex: 3;
+}
+
+.post-category {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 0.5rem;
+}
+
+.post-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-bottom: 1rem;
+}
+
+.post-image-container {
+  margin-bottom: 1rem;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.post-text-content {
+  line-height: 1.6;
+}
+
+.post-category p{
+  display: inline-block;
+  padding: 5px 15px;
+  background-color: #e0e0e0;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.pagination-button {
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pagination-button:not(.disabled):hover {
+  background-color: #e0e0e0;
+}
+
+.pagination-button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+}
+
+.page-indicator {
+  font-weight: bold;
+}
+
+.recent-post-item.active .recent-post-link {
+  font-weight: bold;
+  color: #3182ce;
+}
+
+.recent-posts-list {
+  margin-bottom: 1rem;
+}
+
+.recent-post-item {
+  margin-bottom: 0.5rem;
+}
+
+.recent-post-link {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.recent-post-link:hover {
+  color: #3182ce;
+}
+
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .post-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-bottom: 2rem;
+    padding-right: 0;
+  }
+}
