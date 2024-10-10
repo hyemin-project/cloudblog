@@ -1,0 +1,189 @@
+.search-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: left;
+    position: relative; /* Make the container the reference for absolute elements */
+}
+  
+.search-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: left;
+}
+
+.search-bar {
+    display: flex;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure the suggestions list is positioned relative to the bar */
+}
+
+.search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+.search-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #555;
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    background-color: white;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;  /* Ensure suggestions list takes full width of the search-bar */
+    max-height: 150px;
+    overflow-y: auto;
+    text-align: left;
+    top: 100%;  /* Position the suggestions directly below the search input */
+    left: 0;
+}
+
+.suggestions-list li {
+    padding: 10px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0;
+}
+.error-message {
+    color: red;
+    padding: 10px;
+    text-align: left;
+  }
+
+  .search-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  .search-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .search-bar {
+    display: flex;
+    background-color: #fff;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-input {
+    flex-grow: 1;
+    border: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    outline: none;
+  }
+  
+  .search-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .suggestions-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
+  .close-suggestions {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+  }
+  
+  .suggestions-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .suggestions-list li {
+    padding: 10px 15px;
+    cursor: pointer;
+    text-align: left;
+  }
+  
+  .suggestions-list li:hover {
+    background-color: #f5f5f5;
+  }
+@media (max-width: 768px) {
+    .search-container {
+      padding: 0 20px;
+    }
+    
+    .search-bar {
+      flex-direction: row;
+    }
+    
+    .search-input {
+      border-right: none;
+    }
+    
+    .search-button {
+      border-radius: 0 4px 4px 0;
+    }
+}

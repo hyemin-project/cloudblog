@@ -1,0 +1,169 @@
+/* For the "back" button */
+.back-button {
+  position: absolute; /* Ensure the button stays in place */
+  top: 20px; /* Adjust according to where you want the button */
+  left: 20px; /* Adjust according to where you want the button */
+  z-index: 1000; /* Higher z-index to prevent overlap */
+}
+
+/* Main post list container */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Post card container */
+.post-card {
+  display: flex;
+  flex-direction: column; /* Change to column to avoid side-by-side image and content */
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden; /* Ensures content doesn't overflow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  padding: 1rem; /* Add padding to avoid overflow */
+}
+
+/* Hover effect for post card */
+.post-card:hover {
+  background-color: #f7fafc;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Post image container */
+.post-image {
+  width: 100%; /* Set width to 100% to fill the container */
+  max-height: 300px; /* Optional: Set a max height to avoid huge images */
+  overflow: hidden; /* Ensure content does not overflow */
+  flex-shrink: 0;
+  margin-bottom: 1rem; /* Add some space between image and text */
+}
+
+/* Ensures the image covers the area without distortion */
+.post-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
+}
+
+/* Post content area */
+.post-content {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Post title styling */
+.post-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+}
+
+/* Date formatting */
+.post-date {
+  font-size: 0.875rem;
+  color: #718096;
+  margin: 0 0 1rem 0;
+}
+
+/* Excerpt styling */
+.post-excerpt {
+  font-size: 1rem;
+  color: #4a5568;
+  margin: 0 0 1rem 0;
+}
+
+/* Post footer to show view count and read more button */
+.post-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+/* View count styling */
+.view-count {
+  font-size: 0.875rem;
+  color: #718096;
+}
+
+/* Read more button styling */
+.read-more-btn {
+  background-color: transparent;
+  color: #3182ce;
+  padding: 0.5rem 0;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  color: #2c5282;
+  text-decoration: underline;
+}
+
+/* Loading, error, and no posts styling */
+.loading, .error, .no-posts {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1rem;
+  color: #4a5568;
+}
+
+/* Error color */
+.error {
+  color: #e53e3e;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  margin: 0 10px;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 640px) {
+  .post-card {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Additional responsive styling for mid-sized screens */
+@media (max-width: 768px) {
+  .post-card {
+    flex-direction: column;
+  }
+
+  .post-image {
+    width: 100%;
+    height: auto;
+  }
+}
