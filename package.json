@@ -1,14 +1,19 @@
 {
   "name": "cloud-native-blog",
   "version": "1.0.0",
+  "homepage": "https://hyemin-project.github.io/cloudblog/",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run client\"",
     "server": "cd backend && nodemon server.js",
     "client": "cd frontend && npm start",
-    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "install-all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build": "cd frontend && npm run build",
+    "predeploy": "cd frontend && npm run build",
+    "deploy": "gh-pages -d frontend/build"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",
+    "gh-pages": "^6.2.0",
     "nodemon": "^2.0.7"
   },
   "dependencies": {
